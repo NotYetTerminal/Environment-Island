@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://imported_meshes/buildings/wind_turbine.glb" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Building.gd" type="Script" id=2]
+[ext_resource path="res://addons/destruction/destruction.gd" type="Script" id=3]
+[ext_resource path="res://imported_meshes/fractures/windturbine_fracture.glb" type="PackedScene" id=4]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Wind_Turbine" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+type = "Windmill"
+
+[node name="WindTurbine" parent="." index="0"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.5, 0 )
+
+[node name="Blades" parent="WindTurbine" index="0"]
+transform = Transform( 0.99863, -0.0523359, 0, 0.0523359, 0.99863, 0, 0, 0, 1, 0, 3.7, -0.0102088 )
+
+[node name="Destruction" type="Node" parent="." index="2"]
+script = ExtResource( 3 )
+shard_scene = ExtResource( 4 )
+
+[node name="StaticBody" type="StaticBody" parent="." index="3"]
+transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 0, 1.5, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="StaticBody" to="." method="_on_StaticBody_input_event"]

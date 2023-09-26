@@ -1,0 +1,22 @@
+Randomly generated island
+
+Place natural disasters to destroy the buildings
+
+Abilities:
+	Lightning
+	Flood
+	Earthquake
+	Fire
+	Heavy Wind
+
+Buildings:
+	House - Lightning, Flood, Fire
+	Office - Lightning, Flood, Heavy Wind
+
+Defenses:
+	Windmill - Heavy Wind | Flood
+	Lightning Rod - Lightning | Heavy Wind
+	Water Pump - Flood | Fire
+	Rocks - Fire | Earthquake
+
+If building is next to a terrain that is twice as big then the lighning strikes the terrain.

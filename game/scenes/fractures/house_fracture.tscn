@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://imported_meshes/fractures/house_fracture.glb" type="PackedScene" id=1]
+
+[node name="house_fracture" instance=ExtResource( 1 )]
