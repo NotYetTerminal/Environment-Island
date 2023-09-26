@@ -1,3 +1,3 @@
 # Environment Island
  
- [itch.io](https://notyetterminal.itch.io/environment-island)
+ [Play game on itch.io](https://notyetterminal.itch.io/environment-island)
